@@ -1,0 +1,51 @@
+:root {
+    background-image: url("/SurviveOnPE/background.png");
+    user-select: none;
+}
+.hover {
+    margin-right: 150px;
+}
+
+.button-styling {
+	background: none;
+	border: none;
+    cursor: pointer !important;
+}
+
+.button-styling-hover {
+    border:none;
+    background-color: white !important;
+    border-radius: 50px !important;
+}
+
+.text {
+    color: #222034 !important;
+    font-size: 60px;
+}
+.center-filter {
+    justify-content: center;
+    text-align: center;
+}
+
+.active-game-avaliable {
+    color: black !important;
+    font-family: 'Consolas', sans-serif;
+}
+
+.button-active-game-avaliable {
+    color: black !important;
+    font-family: 'Consolas', sans-serif;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.avaliable-div {
+    background-color: white;
+    border-radius: 20px;
+    width: 300px;
+    height: 500px;
+    justify-content: center;
+    text-align: center;
+    display: block;
+}

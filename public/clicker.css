@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap');
+
+body {
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+:root {
+    background-image: url("/Clicker/background.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: brown;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    -webkit-user-select: none;
+    user-select: none;
+    font-family: 'Ubuntu Mono', monospace;
+}
+
+@media only screen and (max-width: 600px) {
+    :root {
+        background-size: 100% 100%;
+    }
+}
+
+h1 {
+    text-align: center;
+    color: white;
+}
+
+input {
+    position: relative;
+    margin-top: 10px;
+    background-color: white;
+    border-radius: 15px;
+    border: none;
+    padding: 10px;
+    font-family: 'Ubuntu Mono', monospace;
+}
+
+p {
+    font-size: 2.5rem;
+    color: white;
+    text-align: center;
+}
+
+span {
+    color: white;
+    font-size: 1rem;
+}
+
+.leaderboard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    background: #2c3e50; /* Background color for the leaderboard */
+    padding: 20px;
+    margin-top: 20px;
+}
+
+button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Ubuntu Mono', monospace;
+}
+
+input::placeholder {
+    color: black;
+    font-size: 0.9rem;
+    font-family: 'Ubuntu Mono', monospace;
+}

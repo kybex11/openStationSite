@@ -1,0 +1,76 @@
+:root {
+	color: #242424;
+	--steps: 50;
+	--background: radial-gradient(at 40% 20%, hsla(28, 50%, 60%, 0.8) 0px, transparent 50%),
+		radial-gradient(at 80% 0%, hsla(189, 50%, 48%, 0.8) 0px, transparent 50%),
+		radial-gradient(at 0% 50%, hsla(355, 50%, 83%, 0.8) 0px, transparent 50%),
+		radial-gradient(at 80% 50%, hsla(340, 50%, 66%, 0.8) 0px, transparent 50%),
+		radial-gradient(at 0% 100%, hsla(22, 50%, 67%, 0.8) 0px, transparent 50%),
+		radial-gradient(at 80% 100%, hsla(242, 50%, 60%, 0.8) 0px, transparent 50%),
+		radial-gradient(at 0% 0%, hsla(343, 50%, 66%, 0.8) 0px, transparent 50%);
+	user-select: none;
+	font-family: "Consolas", sans-serif;
+	font-size: 2rem;
+}
+
+body {
+	display: flex;
+	place-content: center;
+	min-height: 100vh;
+	background: var(--background);
+}
+
+.typing {
+	justify-content: center;
+	align-items: center;
+	margin: auto;
+}
+
+.table-text {
+	border: none;
+	background-color: #ffffff;
+	height: 90px;
+	width: 250px;
+	border-radius: 15px;
+	color: black;
+	margin-right: 100px;
+	font-size: 0.7rem;
+	cursor: pointer;
+}
+
+.center-filter {
+	text-align: center;
+	justify-content: center;
+	margin: auto;
+}
+
+.container_default_menu_style {
+	background: #a671b1;
+	border-radius: 20px;
+	width: 60%;
+	height: auto;
+	margin: auto;
+}
+
+button {
+	text-align: center;
+	justify-content: center;
+	justify-self: center;
+	margin: auto;
+}
+
+.snowflake {
+	position: fixed;
+	top: 0;
+	width: 10px;
+	height: 10px;
+	background-color: #fff;
+	border-radius: 50%;
+	animation: fall linear infinite;
+}
+
+@keyframes fall {
+	to {
+		transform: translateY(100vh);
+	}
+}

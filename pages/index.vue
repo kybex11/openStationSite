@@ -1,0 +1,103 @@
+<template>
+<div>
+    <Head>
+        <Title>Hello, This is OpenStation</Title>
+    </Head>
+    <header>
+    <h1 class="typing-small">Hello, This is OpenStation</h1>
+    <div class="typing-small">
+    <div class="center-filter">
+        <br>
+        <div class="container_default_menu_style">
+        <div class="typing-small">
+          <br><br>
+           <th><button class="table-text" @click="navigateTo('/')">SurviveOnPE(Closed)</button></th><!--to="/surviveonpeSelect"-->
+           <th><button class="table-text" @click="navigateTo('/clicker')">Clicker(Dev Preview)</button></th>
+           <th ><button class="table-text" @click="navigateTo('/mcseed')">mcseed</button></th>
+           <br>
+           <th><button class="table-text" @click="navigateTo('/tetris')">tetris(Beta Preview)</button></th>
+           <th><button class=" table-text" @click="navigateTo('/tictactoe')">Tic Tac Toe(Opened)</button></th>
+           <th><button class=" table-text" @click="navigateTo('/qrgen')">QR Generator</button></th>
+          <br>
+          <th><button class=" table-text" @click="navigateTo('/')">Zombies Town(In dev)</button></th>
+          <th><button class=" table-text" @click="navigateTo('/urlshorter')">UrlShortener</button></th>
+          <th><button class=" table-text" @click="navigateTo('/gradientgenerator')">Gradient Generator</button></th>
+          <br>
+          <th><button class=" table-text" @click="navigateTo('/')">Engine</button></th>
+          <th><button class=" table-text" @click="navigateTo('/passgenerator')">Password Generator</button></th>
+          <th><button class="table-text" @click="navigateTo('/lastStep')">LastStep Sandbox</button></th>
+          <br>
+          <th><button class="table-text" @click="navigateTo('https://discord.gg/QWru6BHmQR')" target="_blank">Join to my Discord Server  <i class='bx bxl-discord-alt'></i></button></th>
+        <br><br>
+        </div>
+          </div>
+        <h1 class="typing-small">Other games In development...</h1>
+        <br>
+        <h1 class="typing-large-blue">🎮Open Station - Ваш центр онлайн-игр</h1>
+        <p class="typing-medium-blue">Open Station - это платформа, предназначенная для предоставления вам лучших онлайн-игр. Мы собираем разнообразные игры со всего мира, чтобы вы могли наслаждаться их игрой прямо в вашем браузере. Наша команда постоянно ищет новые и увлекательные игры, чтобы обеспечить вам непрерывное развлечение.</p>
+        <br>
+        <h1 class="typing-large-blue">Работает на браузере и делится с вами</h1>
+        <p class="typing-medium-blue">Наша цель - сделать игры доступными для всех, независимо от устройства или местоположения. Все игры на Open Station работают прямо в вашем браузере, что означает, что вам не нужно скачивать или устанавливать дополнительное программное обеспечение. Просто выберите игру, которую вы хотите играть, и начните играть! Мы стремимся создать общность, где каждый может поделиться своими любимыми играми и открыть для себя новые.</p>      </div>
+        <br>
+        <h1 class="typing-large-blue">Наши дополнительные сервисы</h1>
+        <p class="typing-medium-blue">В дополнение к нашей основной платформе игр, мы также предлагаем ряд дополнительных сервисов. Это может включать в себя обучающие материалы, форумы для обсуждения игр, инструменты для разработчиков и многое другое. Мы стремимся предоставить все необходимые ресурсы для нашего сообщества игроков и разработчиков.</p>
+      </div>
+  </header>
+</div>
+</template>
+
+<script setup lang="ts">
+import { ref, onMounted } from 'vue';
+
+const snowflakes = ref<Array<HTMLDivElement>>([]);
+
+const createSnowflake = () => {
+  const snowflake = document.createElement('div');
+  snowflake.className = 'snowflake';
+  snowflake.style.left = `${Math.random() * 100}vw`;
+  document.body.appendChild(snowflake);
+
+  snowflakes.value.push(snowflake);
+};
+
+const animateSnowflakes = () => {
+  snowflakes.value.forEach((snowflake, index) => {
+    const speed = Math.random() * 3 + 1;
+    snowflake.style.animationDuration = `${speed}s`;
+
+    snowflake.addEventListener('animationiteration', () => {
+      snowflake.style.top = '0';
+      snowflake.style.left = `${Math.random() * 100}vw`;
+    });
+
+    snowflake.addEventListener('animationend', () => {
+      snowflake.remove();
+      snowflakes.value.splice(index, 1);
+      createSnowflake();
+    });
+  });
+};
+
+onMounted(() => {
+  for (let i = 0; i < 30; i++) {
+    createSnowflake();
+  }
+
+  animateSnowflakes();
+});
+
+useHead({
+  link: [
+    {
+      rel: 'stylesheet',
+      href: 'indexstyle.css',
+      crossorigin: ''
+    },
+    {
+        rel: 'stylesheet',
+        href: 'https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css',
+        crossorigin: ''
+    }
+  ]
+});
+</script>
