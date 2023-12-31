@@ -1,30 +1,12 @@
 <template>
-    <main>
-        <Head>
-            <Title>Login Or Register</Title>
-        </Head>
-        <div class="form">
-          <h1>Login Or Register</h1>
-        <div class="form">
-            <div class="form-group">
-              <label for="username">Username</label>
-              <input type="username" class="form-control" id="username" placeholder="Enter username">
-            </div>
-            <br>
-            <div class="form-group">
-              <label for="email">Email</label>
-              <input type="email" class="form-control" id="email"  placeholder="Enter email">
-            </div>
-            <br>
-            <div class="form-group">
-              <label for="password">Password</label>
-              <input type="password" class="form-control" id="password"  placeholder="Enter password">
-            </div>
-            <button class="btn btn-primary" @click="auth_event_register_user()">Join</button>
-            <button class="btn btn-forget">Forget password?</button>
-          </div>
-        </div>
-      </main>
+  <div class="container">
+    <h1>Login with discord or username</h1>
+    <label for="discord">Sign in with discord   </label>
+    <button class="button danger" id="discord" >Discord ( In dev... )</button>
+    <br><br>
+    <label for="anonymous">Sign in with username</label>
+    <button class="button secondary" id="anonymous">Anonymous ( In dev... )</button>
+  </div>
 </template>
 
 <script setup lang="ts">
@@ -32,7 +14,7 @@ useHead({
   link: [
     {
       rel: 'stylesheet',
-      href: 'auth.css',
+      href: 'indexstyle.css',
       crossorigin: ''
     },
     {
@@ -42,4 +24,6 @@ useHead({
     }
   ]
 });
+//@click="navigateTo('/authAnonymous')"
+//navigateTo('https://discord.com/api/oauth2/authorize?client_id=949927873249148998&response_type=code&redirect_uri=http%3A%2F%2Fopen-station.site%2Fdiscordcheckauth&scope=identify', {external:true})
 </script>

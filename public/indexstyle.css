@@ -13,7 +13,46 @@
 	font-family: "Consolas", sans-serif;
 	font-size: 2rem;
 }
+.button {
+	display: inline-block;
+	padding: 10px 20px; /* Ваши текущие отступы */
+	font-size: 16px;
+	text-align: center;
+	text-decoration: none;
+	cursor: pointer;
+	border: 2px solid #3498db;
+	border-radius: 5px;
+	transition:
+		background-color 0.3s,
+		color 0.3s;
+}
 
+/* Стили при наведении */
+.button:hover {
+	background-color: #3498db;
+	color: #fff;
+}
+
+/* Стили при активации */
+.button:active {
+	background-color: #2980b9;
+}
+
+/* Дополнительные стили для разных видов кнопок (пример) */
+.primary {
+	background-color: #3498db;
+	color: #fff;
+}
+
+.secondary {
+	background-color: #2ecc71;
+	color: #fff;
+}
+
+.danger {
+	background-color: #e74c3c;
+	color: #fff;
+}
 body {
 	display: flex;
 	flex-direction: column;
