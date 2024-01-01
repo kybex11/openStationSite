@@ -27,7 +27,7 @@
           <th><button class=" table-text" @click="navigateTo('/urlshorter')">UrlShortener</button></th>
           <th><button class=" table-text" @click="navigateTo('/gradientgenerator')">Gradient Generator</button></th>
           <br>
-          <th><button class=" table-text" @click="navigateTo('/')">Engine</button></th>
+          <th><button class=" table-text" @click="navigateTo('/enginepreview')">Engine</button></th>
           <th><button class=" table-text" @click="navigateTo('/passgenerator')">Password Generator</button></th>
           <th><button class="table-text" @click="navigateTo('/lastStep')">LastStep Sandbox</button></th>
           <br>
