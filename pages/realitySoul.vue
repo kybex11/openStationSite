@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Dev in dev........</h1>
+    <h1>This project now started to work</h1>
   </div>
 </template>
 

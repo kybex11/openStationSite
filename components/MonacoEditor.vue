@@ -23,12 +23,11 @@ export default {
   methods: {
     async initMonaco() {
       if (typeof window !== 'undefined') {
-        // Only initialize Monaco Editor on the client side
         const monaco = await import('monaco-editor');
         this.editor = monaco.editor.create(document.getElementById(this.editorId), {
           value: this.code,
           language: this.language,
-          theme: 'vs-dark', // You can change the theme as needed
+          theme: 'vs-dark',
         });
       }
     },
@@ -42,8 +41,6 @@ export default {
     }
   },
 };
-
-
 </script>
 
 <style scoped>
