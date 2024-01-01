@@ -8,6 +8,9 @@
 
     <div class="typing-small">
     <div class="center-filter">
+      <div v-if="isRotating" class="cube-container">
+        <div class="cube"></div>
+    </div>
         <br>
         <div class="container_default_menu_style">
         <div class="typing-small">
@@ -48,6 +51,16 @@
 </template>
 
 <script setup lang="ts">
+import { ref } from 'vue';
+
+const isRotating = ref(false);
+
+const startRotation = () => {
+  isRotating.value = true;
+}
+
+startRotation();
+
 
 useHead({
   link: [
