@@ -13,6 +13,18 @@
 	font-family: "Consolas", sans-serif;
 	font-size: 2rem;
 }
+
+@media (max-width: 768px) {
+	.container_default_menu_style {
+		width: 90%; /* Adjust the width for smaller screens */
+	}
+
+	.table-text {
+		width: 100%; /* Make buttons take full width on small screens */
+		margin: 10px 0; /* Adjust the margin for better spacing */
+	}
+}
+
 .button {
 	display: inline-block;
 	padding: 10px 20px; /* Ваши текущие отступы */
