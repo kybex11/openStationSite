@@ -31,8 +31,10 @@
           <th><button class=" table-text" @click="navigateTo('/passgenerator')">Password Generator</button></th>
           <th><button class="table-text" @click="navigateTo('/lastStep')">LastStep Sandbox</button></th>
           <br>
+          <th><button class="table-text" @click="navigateTo('/calculator')">Calculator</button></th>
+          <br>
           <th><button class="table-text" @click="navigateTo('https://discord.gg/QWru6BHmQR')" target="_blank">Join to my Discord Server  <i class='bx bxl-discord-alt'></i></button></th>
-        <br><br>
+          <br><br>
         </div>
           </div>
         <h1 class="typing-small">Other games In development...</h1>

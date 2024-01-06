@@ -160,6 +160,8 @@ body {
 }
 
 .container_default_menu_style {
+	display: grid;
+  grid-template-columns: repeat(4, 1fr);
 	background: #a671b1;
 	border-radius: 20px;
 	width: 60%;
