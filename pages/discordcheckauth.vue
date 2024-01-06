@@ -1,5 +1,5 @@
 <template>
-<h1>Niggers</h1>
+<h1>Check</h1>
 </template>
 
 <script setup lang="ts">
@@ -27,13 +27,13 @@ fetch("https://discordapp.com/api/ouath2/token", {
         "Authorization" : `${data.body.token_type} ${data.body.access_token}`,
       },
     })
-    .then((userReponse) => userReponse.json())
+    .then((userResponse) => userResponse.json())
     .then(data2 => {
       console.log(data2);
     })
   })
   .catch(error => {
-    console.error(error);
+    console.error("Error:",error);
   })
 
 })

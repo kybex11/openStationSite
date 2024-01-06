@@ -30,6 +30,8 @@
     "nipplejs": "^0.10.1",
     "node-fetch": "^3.3.2",
     "nuxt-property-decorator": "^2.9.1",
+    "sass": "^1.69.7",
+    "sass-loader": "^13.3.3",
     "socket.io": "^4.7.2",
     "socket.io-client": "^4.7.2",
     "unirest": "^0.6.0",
